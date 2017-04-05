@@ -36,6 +36,7 @@ public class NComputeThreads {
       thread.start();
     }
     
+    System.out.println(numberOfThreads+ " thread(s) running..");
     try {
       Thread.sleep(duration*1000);
     } catch (InterruptedException e) {
@@ -46,5 +47,6 @@ public class NComputeThreads {
     for (int t = 0; t < numberOfThreads; t++ ){
       threadList.get(t).interrupt();
     }
+	System.exit(0);
   }
 }
